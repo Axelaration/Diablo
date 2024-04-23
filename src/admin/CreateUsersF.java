@@ -127,26 +127,34 @@ public class CreateUsersF extends javax.swing.JFrame {
         del = new javax.swing.JButton();
         cl = new javax.swing.JButton();
         cc = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 204, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("CREATE FORM");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 164, 32));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 164, 32));
 
-        jLabel2.setText("User ID");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setText("User ID:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
 
-        jLabel3.setText("Last Name");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Last Name:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
 
-        jLabel4.setText("Gmail");
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Gmail:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
-        jLabel5.setText("UserName");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("Username:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
-        jLabel6.setText("PassWord");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Password:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
 
@@ -164,6 +172,8 @@ public class CreateUsersF extends javax.swing.JFrame {
         ut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Admin", " " }));
         getContentPane().add(ut, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 190, -1));
 
+        add.setBackground(new java.awt.Color(51, 51, 51));
+        add.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         add.setText("ADD");
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,18 +185,28 @@ public class CreateUsersF extends javax.swing.JFrame {
         ut1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Pending" }));
         getContentPane().add(ut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 190, -1));
 
-        jLabel8.setText("User Type");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setText("User Type:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
-        jLabel9.setText("User Status");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 60, 20));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("User Status:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 70, 20));
 
         id.setEnabled(false);
+        id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idActionPerformed(evt);
+            }
+        });
         getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 190, -1));
 
-        jLabel10.setText("First Name");
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel10.setText("First Name:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
 
+        rf.setBackground(new java.awt.Color(51, 51, 51));
+        rf.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         rf.setText("REFRESH");
         rf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +215,7 @@ public class CreateUsersF extends javax.swing.JFrame {
         });
         getContentPane().add(rf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 80, -1));
 
+        up.setBackground(new java.awt.Color(51, 51, 51));
         up.setText("UPDATE");
         up.setEnabled(false);
         up.addActionListener(new java.awt.event.ActionListener() {
@@ -204,6 +225,8 @@ public class CreateUsersF extends javax.swing.JFrame {
         });
         getContentPane().add(up, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 80, -1));
 
+        del.setBackground(new java.awt.Color(51, 51, 51));
+        del.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         del.setText("DELETE");
         del.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,6 +235,8 @@ public class CreateUsersF extends javax.swing.JFrame {
         });
         getContentPane().add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 80, -1));
 
+        cl.setBackground(new java.awt.Color(51, 51, 51));
+        cl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         cl.setText("CLEAR");
         cl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,6 +245,8 @@ public class CreateUsersF extends javax.swing.JFrame {
         });
         getContentPane().add(cl, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 80, -1));
 
+        cc.setBackground(new java.awt.Color(51, 51, 51));
+        cc.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         cc.setText("CANCEL");
         cc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,6 +254,9 @@ public class CreateUsersF extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 80, -1));
+
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 400));
 
         pack();
         setLocationRelativeTo(null);
@@ -317,6 +347,10 @@ public class CreateUsersF extends javax.swing.JFrame {
        
     }//GEN-LAST:event_ccActionPerformed
 
+    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -370,6 +404,7 @@ public class CreateUsersF extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField ln;
     public javax.swing.JTextField mail;
     public javax.swing.JTextField pw;
